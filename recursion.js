@@ -1,5 +1,5 @@
 const fibs = (n) => {
-    let array = [1, 1];
+    let array = [0, 1];
     for(let i = 2; i <= n; i++) {
         array[i] = array[i-2] + array[i-1];
     }
@@ -8,7 +8,7 @@ const fibs = (n) => {
 
 const fibsRec = (n) => {
     if (n < 2) {
-        return 1;
+        return n;
     }
     return (fibsRec(n-1) + fibsRec(n-2));
 }
@@ -36,4 +36,6 @@ const merge = (left, right) => {
     }
 }
 
+console.log(fibs(8));
+console.log(fibsRec(8));
 console.log(mergeSort([105, 79, 100, 110]));
